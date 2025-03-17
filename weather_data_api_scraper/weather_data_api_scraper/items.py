@@ -7,6 +7,11 @@ import scrapy
 
 
 class WeatherDataApiScraperItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    location = scrapy.Field()
+    temperature = scrapy.Field()
+    condition = scrapy.Field()
+    feels_like = scrapy.Field()
+    forecast = scrapy.Field()
+    humidity = scrapy.Field()
+    url = scrapy.Field()
+    
