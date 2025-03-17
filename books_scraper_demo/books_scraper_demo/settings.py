@@ -90,3 +90,13 @@ ROBOTSTXT_OBEY = True
 # Set settings whose default value is deprecated to a future-proof value
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
+
+FEEDS = {
+    "books.jsonl": {
+        "format": "jsonlines",
+        "encoding": "utf-8",
+        "store_empty": False,
+        "fields": None,
+        "indent": 4,
+    }
+}
