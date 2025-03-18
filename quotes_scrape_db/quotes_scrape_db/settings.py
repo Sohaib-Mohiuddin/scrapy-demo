@@ -62,9 +62,9 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    "quotes_scrape_db.pipelines.QuotesScrapeDbPipeline": 300,
-#}
+ITEM_PIPELINES = {
+   "quotes_scrape_db.pipelines.QuotesScrapeDbPipeline": 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
@@ -90,3 +90,15 @@ ROBOTSTXT_OBEY = True
 # Set settings whose default value is deprecated to a future-proof value
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
+
+FEEDS = {
+    "quotes.jsonl": {
+        "format": "jsonlines",
+        "encoding": "utf-8",
+        "indent": 4,
+        "overwrite": True,
+        "item_export_kwargs": {
+            "ensure_ascii": False,
+        },
+    },
+}
