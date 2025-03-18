@@ -91,11 +91,10 @@ ROBOTSTXT_OBEY = True
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
 
-ITEM_PIPELINES = {
-    'scrapy.pipelines.images.ImagesPipeline': 1,
-}
+ITEM_PIPELINES =  {'image_scraper_demo.pipelines.customImagePipeline': 1,}
 
-ITEM_PIPELINES = {"scrapy.pipelines.files.FilesPipeline": 1}
+
+# ITEM_PIPELINES = {"scrapy.pipelines.files.FilesPipeline": 1,}
 # Set the folder where images will be downloaded
 IMAGES_STORE = 'downloads/images'
-FILES_STORE = 'downloads/files'
+# FILES_STORE = 'downloads/files'
