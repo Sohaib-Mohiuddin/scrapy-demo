@@ -3,8 +3,8 @@ import scrapy
 
 class ImagespiderSpider(scrapy.Spider):
     name = "imagespider"
-    allowed_domains = ["picsum.photos"]
-    start_urls = ["https://picsum.photos"]
+    # allowed_domains = [wikipedia.org]
+    start_urls = ["https://en.wikipedia.org/wiki/Eiffel_Tower"]
 
     def parse(self, response):
         raw_image_urls = response.css('img ::attr(src)').getall()
